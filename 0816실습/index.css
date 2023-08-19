@@ -1,0 +1,102 @@
+/* 아래 코드는 문제 해결을 위해 기본적으로 제공되는 코드입니다. 수정하지 마세요! */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .container .header {
+    height: 100px;
+    line-height: 100px;
+  }
+  
+  #main article {
+    float: left;
+    width: 25%;
+    height: 200px;
+    text-align: center;
+  }
+  
+  #main article.first_article {
+    background-color: #fbfbfb;
+  }
+  
+  #main article.second_article {
+    background-color: #efeff6;
+  }
+  
+  #main article.third_article {
+    background-color: #dcdcec;
+  }
+  
+  #main article.fourth_article {
+    background-color: #cbcae3;
+  }
+  
+  .footer {
+    padding-top: 15px;
+    text-align: center;
+    clear: both;
+    width: 100%;
+  }
+  
+  /* 지시사항 2번과 3번을 참고하여 코드를 작성하세요. */
+  @media screen and (min-width: 320px) and (max-width: 1000px) {
+      .container {
+          width: 640px;
+          transition-property: width;
+          transition-duration: 2s;
+          transition-timing-function: ease-in-out;
+      }
+      img {
+          width: 90%;
+          transition-property: width;
+          transition-duration: 2s;
+          transition-timing-function: ease-in-out;
+      }
+      #main article {
+          width: 50%;
+          text-align: center;
+          transition-property: text-align,width;
+          transition-duration: 2s;
+          transition-timing-function: ease-in-out;
+      }
+      .header{
+          text-align: center;
+          transition-property: text-align;
+          transition-duration: 2s;
+          transition-timing-function: ease-in-out;
+      }
+      #main article.first-article{
+          background-color: #cbcae3;
+          transition-property: background-color;
+          transition-duration: 2s;
+          transition-timing-function: ease-in-out;
+      }
+      #main article.second-article{
+          background-color: #dcdcec;
+          transition-duration: 2s;
+          transition-timing-function: ease-in-out;
+      }
+      #main article.third-article{
+          background-color: #dcdcec;
+          transition-duration: 2s;
+          transition-timing-function: ease-in-out;
+      }
+      #main article.fourth-article{
+          background-color: #fbfbfb;
+          transition-duration: 2s;
+          transition-timing-function: ease-in-out;
+      }
+  }

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Transform</title>
+    <style>
+			#container {
+				width:800px;
+				height:200px;
+				margin:20px auto;
+			}
+			.origin {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+			}
+			.origin > div {				
+				width:100px;
+				height:100px;
+				background-color:orange;
+			}
+      #movex:hover {
+        transform: translateX(50px);  /* x축으로(가로) 50px 이동 */
+      }
+      #scaley{
+        transform: scaleY(1.5);  /* y축으로(세로) 1.5배 확대 */ 
+      } 
+      #rotate2 {
+      	transform: rotate(-40deg);  /* 시계 반대 방향(왼쪽)으로 40도 회전 */
+      }
+	  #skewxy {
+        transform: skew(-25deg, -15deg);  /* x축 기준으로 -25도, y축 기준으로 -15도 비틀기 */
+      }
+		</style>
+	</head>
+	<body>		
+		<div id="container">
+			<div class="origin">
+				<div  id="movex"></div>		
+			</div>
+			<div class="origin">
+				<div id="scaley"></div>	
+			</div>
+			<div class="origin">
+				<div id="rotate2"></div>		
+			</div>
+			<div class="origin">
+				<div id="skewxy"></div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
