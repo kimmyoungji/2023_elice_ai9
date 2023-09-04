@@ -15,6 +15,17 @@ const myPromise = new Promise(() => {
     }, 1000);
 });
 
+myPromise2.then(result=>{
+    console.log(result);
+    return '선물3';
+}).then(result => {
+    console.log(result);
+    console.log('선물 다 받음!');
+    return '선물3';
+}).then(result => {
+    console.log(result);
+}).catch().finally()
+
 /**
  * 상태
  * - 대기 (pending): 비동기 작업을 처리하는 중...

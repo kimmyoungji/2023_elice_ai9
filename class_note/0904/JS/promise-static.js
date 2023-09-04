@@ -58,21 +58,21 @@
  * 5] Promise.any()
  * 
  */
-const promise1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject(3000)
-    }, 3000)
-  })
-  const promise2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(500)
-    }, 500)
-  })
-  const promise3 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject(1000)
-    }, 1000)
-  })
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject(3000)
+//     }, 3000)
+//   })
+//   const promise2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(500)
+//     }, 500)
+//   })
+//   const promise3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject(1000)
+//     }, 1000)
+//   })
   // Promise.any([promise1, promise2, promise3])
   //   .then(console.log)
   //   .catch(console.error)
@@ -81,6 +81,32 @@ const promise1 = new Promise((resolve, reject) => {
    * 6] Promise.race()
    */
   
-  Promise.race([promise1, promise2, promise3])
-    .then(console.log)
-    .catch(console.error)
+  // Promise.race([promise1, promise2, promise3])
+  //   .then(console.log)
+  //   .catch(console.error)
+
+  // const myPromise2 = new Promise(()=>{
+
+  // });
+
+  // console.log(myPromise2);
+  // const result = Promise.resolve(100);
+  // result
+  //   .then( el => el / 2)
+  //   .then(el => Promise.reject('Erorr 발생!!'))
+  //   .then(el => console.log(el));
+
+  // 수업
+
+  function fetchData(){
+    return fetch('https://jsonplaceholder.typicode.com/todos?_limit=5&_delay=2000')
+    .then(result => result.json())
+    .then(data =>{
+      if(data.length ===5){
+        return Promise.reject('에러반환');
+      }
+    })
+  }
+
+fetchData()
+.then(e1=>console.log);
