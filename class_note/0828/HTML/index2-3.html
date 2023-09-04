@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red">Hello World</div>
+    <script>
+      const $box = document.querySelector(".box");
+
+      // .box 요소의 class 어트리뷰트 정보를 담은 DOMTokenList 객체를 취득
+      // classList가 반환하는 DOMTokenList 객체는 HTMLCollection과 NodeList와 같이
+      // 노드 객체의 상태 변화를 실시간으로 반영하는 살아 있는(live) 객체다.
+      console.log($box.classList);
+      // DOMTokenList(2) [length: 2, value: "box blue", 0: "box", 1: "blue"]
+
+      // .box 요소의 class 어트리뷰트 값 중에서 'red'만 'blue'로 변경
+      $box.classList.replace("red", "blue");
+
+      $box.classList.add("foo"); // -> class="box red foo"
+      $box.classList.add("bar", "baz"); // -> class="box red foo bar baz"
+
+      $box.classList.remove("foo"); // -> class="box red bar baz"
+      $box.classList.remove("bar", "baz"); // -> class="box red"
+      $box.classList.remove("x"); // -> class="box red"
+
+      $box.classList.item(0); // -> "box"
+      $box.classList.item(1); // -> "red"
+
+      $box.classList.contains("box"); // -> true
+      $box.classList.contains("blue"); // -> false
+
+      $box.classList.replace("red", "blue"); // -> class="box blue"
+
+      $box.classList.toggle("foo"); // -> class="box blue foo"
+      $box.classList.toggle("foo"); // -> class="box blue"
+
+      // class 어트리뷰트에 강제로 'foo' 클래스를 추가
+      $box.classList.toggle("foo", true); // -> class="box blue foo"
+      // class 어트리뷰트에서 강제로 'foo' 클래스를 제거
+      $box.classList.toggle("foo", false); // -> class="box blue"
+    </script>
+  </body>
+</html>

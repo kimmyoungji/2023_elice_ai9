@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red">Hello World</div>
+    <!-- 이 스크립트는 위의 요소가 생성된 이후에 동작하는 코드이다. -->
+    <script>
+      // $변수는 요소의 속성값을 담은 변수라는의미로 관용적으로 사용된다.
+      const $box = document.querySelector(".box");
+
+      // .box 요소의 class 어트리뷰트 값을 취득
+      console.log($box.className); // 'box red'
+
+      // .box 요소의 class 어트리뷰트 값 중에서 'red'만 'blue'로 변경
+      $box.className = $box.className.replace("red", "blue");
+    </script>
+  </body>
+</html>

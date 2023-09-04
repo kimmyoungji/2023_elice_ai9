@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/example3.js" defer></script>
+    <style>
+        .first-cover, .second-cover, .third-cover, .last-el  {
+            padding: 15px;
+            margin: 15px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .first-cover {
+            background-color: #ddd;
+        }
+
+        .second-cover {
+            background-color: #ccc;
+        }
+
+        .third-cover {
+            background-color: #bbb;
+        }
+
+        .last-el {
+            background-color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <!-- 예제 4. 이벤트 전파과정 -->
+    <ul id="fruits" style="background-color: green; padding: 10px; list-style: none;">
+        <li id="apple" style="background-color: red;">Apple</li>
+        <li id="banana" style="background-color: yellow;">Banana</li>
+        <li id="orange" style="background-color: orange;">Orange</li>
+    </ul>
+    <button style="margin-top: 100px;">Click me!</button>
+
+    <!-- 예제 5. preventDefault -->
+    <div style="margin-top: 100px;">
+        <input type="text">
+    </div>
+
+    <!-- 예제 6. preventDefault -->
+    <div style="margin-top: 100px;" class="first-cover">
+        first-cover
+        <div class="second-cover">
+           second-cover
+          <div class="third-cover">
+            third-cover
+            <div class="last-el">event</div>
+          </div>
+        </div>
+    </div>
+
+    <!-- 예제 6-1. preventDefault -->
+    <div style="margin-top: 100px; padding: 10px; background-color: tomato;" class="container">
+        <button class="btn1">Button 1</button>
+        <button class="btn2">Button 2</button>
+        <button class="btn3">Button 3</button>
+    </div>
+</  body>
+</html>

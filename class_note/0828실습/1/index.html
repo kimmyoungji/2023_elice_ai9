@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>배경색 바꾸기</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    </head>
+
+    <body>
+        <div id="red">red</div>
+        <div id="yellow">yellow</div>
+        <div id="green">green</div>
+
+        <!-- 1. 인라인 이벤트 핸들러 -->
+        <!-- <div onclick="alert('인라인 방식')">인라인 방식</div> -->
+        <!-- 2. DOM요소의 프로퍼티 방식 -->
+        <!-- <div id="property">프로퍼티방식</div> -->
+        <!-- 3. addEventListener 방식 -->
+        <!-- <div id="listener">리스너등록</div> -->
+    </body>
+
+    <!-- <script src="test.js"></script> -->
+    <!-- <script src="index.js"></script> -->
+    <script src="registration.js"></script>
+    <!-- <script>
+        const handlerTwo = document.getElementById("property");
+        handlerTwo.onclick = function () {
+            alert("두번째 방식");
+        };
+
+        // 불가능
+        handlerTwo.onclick = function () {
+            console.log("여러개 이벤트 핸들러 등록");
+        };
+
+        const handlerThree = document.querySelector("#listener");
+        handlerThree.addEventListener("click", () => {
+            alert("세번째 방식");
+        });
+
+        // 가능
+        handlerThree.addEventListener("click", () => {
+            console.log("여러개 이벤트 핸들러 등록");
+        });
+    </script> -->
+</html>
