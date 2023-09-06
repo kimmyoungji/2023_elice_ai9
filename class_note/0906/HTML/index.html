@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>8회차</title>
+    <style>
+      .container {
+        height: 100vh;
+        max-width: 600px;
+        margin: auto;
+        justify-content: space-around;
+        /* display: none; */
+        display: flex;
+      }
+
+      .item {
+        max-width: 300px;
+      }
+
+      .label {
+        width: 4rem;
+        display: block;
+      }
+
+      ol {
+        float: left;
+        padding: 0 1rem 0 0;
+      }
+
+      li {
+        list-style: none;
+      }
+    </style>
+    <script src="../JS/fetchAPI.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <h3>json 데이터 활용하기</h3>
+        <form>
+          <label class="label"
+            >색
+            <input type="text" id="inputColor" placeholder="red" />
+          </label>
+          <br />
+          <button id="buttonSubmit">클릭</button>
+          <h3 id="hexaCode"></h3>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
