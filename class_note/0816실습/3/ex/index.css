@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 100px;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+#test1 {
+    background-color: yellow;
+}
+
+#test1:hover {
+    /* 사이즈 변경 */
+
+    /* 여러개 */
+    transform: translateX(100px) rotate(45deg);
+}
+
+#test2 {
+    background-color: red;
+}
+
+#test2:hover {
+    width: 200px;
+    height: 200px;
+}
+
+#test2 {
+    /* 효과를 적용 할 대상 지정 */
+    transition-property: width, height;
+    /* 변경되는 모든 것에 효과를 적용 */
+    transition-duration: 1s;
+    /* transition: all 2s; */
+    transition-timing-function: linear;
+    /* 변경이 시작되는 시간  */
+    transition-delay: 0.5s;
+}
+
+/* 2 */
+#test3 {
+    background-color: blue;
+}
+
+#test3:hover {
+    width: 200px;
+    height: 200px;
+}
+
+#test3 {
+    /* 약어 : transition: <property> <duration> <timing-function> <delay>; */
+    /* width값에만 효과를 적용 */
+    transition: width 1s;
+    /* 변경되는 모든 것에 효과를 적용 */
+    /* transition: all 2s; */
+}
+
+#test4 {
+    animation-duration: 1s;
+    animation-name: sizeup1;
+}
+
+@keyframes sizeup1 {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 20%;
+    }
+}
+
+#test4:hover {
+    /* @keyframes 이름 */
+    animation-name: sizeup2;
+    /* 변화가 일어나는 기간. 초단위. (기본값 0s) */
+    animation-duration: 1s;
+    /* 반복횟수 */
+    animation-iteration-count: 3;
+    /* 무한반복 */
+    /* animation-iteration-count: infinite; */
+
+    /* 축약형 */
+    animation: sizeup2 1s 3;
+}
+
+@keyframes sizeup2 {
+    0% {
+        width: 100%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 5%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

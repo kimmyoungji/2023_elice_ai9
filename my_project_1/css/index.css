@@ -1,0 +1,49 @@
+* {
+  padidng: 0;
+  margin: 0;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+nav {
+  border-bottom: black solid 1px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+li {
+  padding: 1.5rem 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+main,
+#cards {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  border-top: 1px solid black;
+}
+
+footer div {
+  padding: 1.5rem 2rem;
+}

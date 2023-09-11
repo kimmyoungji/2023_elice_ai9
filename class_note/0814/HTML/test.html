@@ -1,55 +1,65 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- 외부 스타일 시트 -->
-    <link rel="stylesheet" href="../CSS/style.css">
-</head>
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
 
-<style>
+  <style>
     /* 내부 스타일 시트 */
-    .class1 { color: orange; }
+    .class1 {
+      color: orange;
+    }
     /* 우선순위1: 나중에 쓴 스타일이 우선순위가 높다.*/
-    #id1 { color: red; }
-    #id1 { color: green; } 
+    #id1 {
+      color: red;
+    }
+    #id1 {
+      color: green;
+    }
     /* 우선순위2:  구체적인 태그가 우선순위가 높다.*/
-    #random { color: purple; }
-    p { color: green; }
+    #random {
+      color: purple;
+    }
+    p {
+      color: green;
+    }
     /* 우선순위3:  */
     /* div { color: coral !important;} */
 
     /* float test */
     #float-test {
-        width: 480px;
-        height: 360px;
-        background-color: yellow;
-        color: red;
-        /* border: width style color */
-        border: 6px dashed green;
-        /* margin: top right bottom left */
-        margin: 10px 10px;
-        float: right;
+      width: 480px;
+      height: 360px;
+      background-color: yellow;
+      color: red;
+      /* border: width style color */
+      border: 6px dashed green;
+      /* margin: top right bottom left */
+      margin: 10px 10px;
+      float: right;
     }
 
     #clear-test {
-        clear: right;
+      clear: right;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <!-- 인라인스타일 시트 -->
-    <div class="class1" style="font-weight: bold;">아무 내용 입려 </div>
-    <div class="class2" >아무 내용 입려 </div>
-    <div class="class1">아무 내용 입려 </div>
-    <div id="id1">아무 내용 입려 </div>
+    <div class="class1" style="font-weight: bold">아무 내용 입려</div>
+    <div class="class2">아무 내용 입려</div>
+    <div class="class1">아무 내용 입려</div>
+    <div id="id1">아무 내용 입려</div>
     <div>
-        <p id="random">아무내용입력민아렁ㄹ</p>
+      <p id="random">아무내용입력민아렁ㄹ</p>
     </div>
 
     <!-- 박스모델 실습 -->
-    <div style="margin:100px; border-style: dashed; padding: 50px;">
-        박스모델실습
+    <div style="margin: 100px; border-style: dashed; padding: 50px">
+      박스모델실습
     </div>
 
     <!-- display 속성 -->
@@ -62,7 +72,9 @@
     <div id="float-test">플로트 실습해보자</div>
 
     <!-- clear 속성 : float를 해제하여 플로트 요소의 아래로 이동하게 한다 -->
-    <div id="clear-test">클리어 실습해보자 클리어 실습해보자 클리어 실습해보자 클리어 실습해보자 클리어 실습해보자클리어 실습해보자</div>
-</body>
+    <div id="clear-test">
+      클리어 실습해보자 클리어 실습해보자 클리어 실습해보자 클리어 실습해보자
+      클리어 실습해보자클리어 실습해보자
+    </div>
+  </body>
 </html>
-

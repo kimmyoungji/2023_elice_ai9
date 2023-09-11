@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML 문서</title>
+    <style>
+      /* 
+      static: 기본 흐름을 따르고 위치 변경 불가
+      absolute: 기본 흐름에서 벗어나, 부모의 위치를 기준으로 위치 변경
+      relative: 기본 흐름을 따랐을 때의 위치를 기준준으로 위치 변경
+      sticky: 
+      */
+
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        top: 500px;
+        left: 300px;
+        position: static;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        position: absolute;
+        top: 150px;
+        left: 150px;
+      }
+
+      .abs1 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+        top: 0;
+        left: 0px;
+      }
+      .abs2 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <!-- <p>ddddddddd</p> -->
+    <div class="box2">
+      <div class="abs1">
+        <div class="abs2"></div>
+      </div>
+    </div>
+  </body>
+</html>
