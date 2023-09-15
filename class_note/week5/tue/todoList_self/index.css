@@ -1,0 +1,17 @@
+#todo-list {
+  height: auto;
+  max-width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: coral;
+}
+
+#todo-list li {
+  margin: 5px;
+  background-color: aqua;
+}
+
+#todo-list button {
+  margin: 5px;
+}
