@@ -1,0 +1,31 @@
+import React, { useState, useMemo } from "react";
+
+function App() {
+  const [foo, setFoo] = useState(0);
+  const [bar, setBar] = useState(0);
+  const multi = useMemo(() => {
+    console.log("memo", `foo:${foo}`, `bar:${bar}`); // 두개다 반환되었을 때 값이 반환된다.
+    return foo * bar;
+  }, [foo, bar]);
+  return (
+    <div className="App">
+      <input
+        value={foo}
+        onChange={(event) => {
+          const num = event.target.value ? event.target.value : 0;
+          setFoo(parseInt(num));
+        }}
+      ></input>
+      <input
+        value={bar}
+        onChange={(event) => {
+          const num = event.target.value ? event.target.value : 0;
+          setBar(parseInt(num));
+        }}
+      ></input>
+      <div>{multi}</div>
+    </div>
+  );
+}
+
+export default App;

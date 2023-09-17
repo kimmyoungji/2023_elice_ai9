@@ -206,60 +206,55 @@
 let count = 3;
 let number = 10;
 
-for(let i = 0; i < 11; i++){
-  if(i == count) continue;
+for (let i = 0; i < 11; i++) {
+  if (i == count) continue;
   console.log(i);
 }
 
 document.querySelector("#answer").textContent = `이 값은 ${count}입니다.`;
 
-
 let score = 100;
-let result = score > 90 ? "" : "훌륭해" 
+let result = score > 90 ? "" : "훌륭해";
 
+let elem = {};
 
-let elem = {
-
-};
-
-console.log("옵셔널 체이닝")
+console.log("옵셔널 체이닝");
 let result2 = elem?.content;
 let result3 = elem.content;
 console.log(result2);
 console.log(result3);
 
-
 class Rectangle {
-  constructor(width,hegiht){
+  constructor(width, hegiht) {
     this.width = width;
     this.height = height;
     this.size = 100;
   }
 
-    calcArea(){
-      console.log(this.width, this.height);
-    }
+  calcArea() {
+    console.log(this.width, this.height);
+  }
 
-    printSize(){
-      console.log(this.size);
-    }
+  printSize() {
+    console.log(this.size);
+  }
 }
 
-const rect = new Rectangle(100, 200)
+const rect = new Rectangle(100, 200);
 
 rect.calcArea;
 rect.printSize();
 
 // 클래스는 컨스트럭터에 프로퍼티
 // 객체 리터럴 처럼 기본값 설정할 수 있다.
-// 사용할 때는 new 
+// 사용할 때는 new
 
-class Square extends Rectangle{
-  constructor(width,height){
-    super(width, height) // 부모요소에 값 전달하기
+class Square extends Rectangle {
+  constructor(width, height) {
+    super(width, height); // 부모요소에 값 전달하기
   }
 }
 
-const square = new Square(200,300);
+const square = new Square(200, 300);
 square.calcArea();
 square.printSize();
